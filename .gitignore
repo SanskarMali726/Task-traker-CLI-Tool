@@ -1,0 +1,5 @@
+0644: This represents the Unix-style file permissions.
+ 0 indicates an octal number. 
+ 6 (read and write) for the owner, 
+ 4 (read only) for the group, 
+ and 4 (read only) for others
