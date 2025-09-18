@@ -6,22 +6,10 @@ import (
 	"os"
 
 )
-
-
-
-const taskfile = "tasks.json"
-
-func initStorage() error {
-	_,err := os.OpenFile(taskfile,os.O_CREATE|os.O_RDWR,0644)
-
-	if err != nil{
-		return err
-	}
-	return nil
-}
+const taskfile = "task.json"
 
 func loadTasks() ([]Task, error) {
-	file,err := os.OpenFile(taskfile,os.O_RDONLY,0644)
+	file,err := os.OpenFile(taskfile,os.O_CREATE|os.O_RDONLY,0644)
 	if err != nil{
 		return nil,err
 	}
@@ -31,6 +19,14 @@ func loadTasks() ([]Task, error) {
 	if err != nil{
 		return nil,err
 	}
+
+	if len(data) == 0 {
+        _, err := file.Write([]byte("[]"))
+        if err != nil {
+            return nil, err
+        }
+        return []Task{}, nil
+    }
 
 	var t []Task
 

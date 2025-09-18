@@ -18,6 +18,8 @@ func NewTask(description string) Task {
 		UpdatedAt:   time.Now(),
 	}
 }
+/*
+This methods can be used in function markdone or markinprogress
 
 func (t *Task) MarkDone(){
 	t.Status = "done"
@@ -30,4 +32,9 @@ func (t *Task) MarkInProgress(){
 	t.UpdatedAt = time.Now()
 
 }
+*/
+
+
+
+
 
