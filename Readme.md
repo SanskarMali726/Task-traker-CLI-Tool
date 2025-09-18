@@ -15,6 +15,11 @@ Tasks are stored locally in a JSON file, so no external database is required.
 - 🎯 List tasks filtered by status (`done`, `in-progress`, etc.)  
 
 ---
+## Inspired By / Resources
+
+This project was inspired by the [Task Tracker project roadmap](https://roadmap.sh/projects/task-tracker) on roadmap.sh.
+
+---
 
 ## Getting Started
 
